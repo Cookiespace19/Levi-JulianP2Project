@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626ba0a4a50a5a64dacc91798187a3db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
-  maxHealth: 100
+  enemyHealth: 100
+  enemyMaxHealth: 100
   slider: {fileID: 4408858211913058786}
 --- !u!1 &4230390786577719592
 GameObject:
