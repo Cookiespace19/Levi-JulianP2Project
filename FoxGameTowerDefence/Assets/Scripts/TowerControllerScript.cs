@@ -25,22 +25,21 @@ public class TowerControllerScript : MonoBehaviour
         camera2.active = !standardCamera;
     }
 
-    private void OnTriggerStay(Collider collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if(collision.tag == "Player")
+
+        if (collision.tag == "Player")
         {
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                print("Camera");
-                standardCamera = !standardCamera;
-                camera1.active = standardCamera;
-                camera2.active = !standardCamera;
-            }
+            triggerStay = true;
         }
-
-        //als je op een button klikt van de controller, dan instantiate die een dier en sluit die het menu af. (Om een beer te spawnen moet het menu active zijn.)
     }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        triggerStay = false;
+    }
+
+    bool triggerStay = false;
 
     public void Update()
     {
@@ -56,27 +55,52 @@ public class TowerControllerScript : MonoBehaviour
             TP_UI.SetActive(true);
             Player.GetComponent<playerMovement>().enabled = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.E) && triggerStay == true) 
+        {
+                print("Camera");
+                standardCamera = !standardCamera;
+                camera1.active = standardCamera;
+                camera2.active = !standardCamera;
+        }
+        
     }
 
 
-    void TP1()
+    public void TP1()
     {
         Player.transform.position = TPOne.transform.position;
+        TP_UI.SetActive(false);
+        Player.GetComponent<playerMovement>().enabled = true;
+        camera1.active = standardCamera;
     }
-    void TP2()
+    public void TP2()
     {
         Player.transform.position = TPTwo.transform.position;
+        TP_UI.SetActive(false);
+        Player.GetComponent<playerMovement>().enabled = true;
+        camera1.active = standardCamera;
+        
     }
-    void TP3()
+    public void TP3()
     {
         Player.transform.position = TPThree.transform.position;
+        TP_UI.SetActive(false);
+        Player.GetComponent<playerMovement>().enabled = true;
+        camera1.active = standardCamera;
     }
-    void TP4()
+    public void TP4()
     {
         Player.transform.position = TPFour.transform.position;
+        TP_UI.SetActive(false);
+        Player.GetComponent<playerMovement>().enabled = true;
+        camera1.active = standardCamera;
     }
-    void TP5()
+    public void TP5()
     {
         Player.transform.position = TPFive.transform.position;
+        TP_UI.SetActive(false);
+        Player.GetComponent<playerMovement>().enabled = true;
+        camera1.active = standardCamera;
     }
 }
