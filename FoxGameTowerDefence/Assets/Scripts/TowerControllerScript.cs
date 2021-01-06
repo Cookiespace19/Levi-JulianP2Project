@@ -18,12 +18,8 @@ public class TowerControllerScript : MonoBehaviour
 
     public GameObject TP_UI;
 
-    private void Start()
-    {
-
-        camera1.active = standardCamera;
-        camera2.active = !standardCamera;
-    }
+    bool topdown;
+ 
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -43,44 +39,55 @@ public class TowerControllerScript : MonoBehaviour
 
     public void Update()
     {
-
-        if (camera1.active)
+        if (Input.GetKeyDown(KeyCode.E) && triggerStay == true && topdown == false)
         {
-            TP_UI.SetActive(false);
-            Player.GetComponent<playerMovement>().enabled = true;
-        }
+           
+            camera1.active = !camera1.active;
+            camera2.active = !camera2.active;
+            topdown = true;
 
-        if (camera2.active)
-        {
             TP_UI.SetActive(true);
             Player.GetComponent<playerMovement>().enabled = false;
+
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && triggerStay == true) 
+    }
+
+    void ChangeCamera()
+    {
+        if (camera1.active)
         {
-                print("Camera");
-                standardCamera = !standardCamera;
-                camera1.active = standardCamera;
-                camera2.active = !standardCamera;
+            camera2.active = !camera2.active;
+            topdown = false;
         }
-        
+
+        else if (camera2.active)
+        {
+            camera1.active = !camera1.active;
+            topdown = true;
+        }
     }
 
 
     public void TP1()
     {
-        Player.transform.position = TPOne.transform.position;
         TP_UI.SetActive(false);
         Player.GetComponent<playerMovement>().enabled = true;
+        Player.transform.position = TPOne.transform.position;
         camera1.active = standardCamera;
+        ChangeCamera();
+        topdown = false;
+        
     }
     public void TP2()
     {
-        Player.transform.position = TPTwo.transform.position;
+
         TP_UI.SetActive(false);
         Player.GetComponent<playerMovement>().enabled = true;
+        Player.transform.position = TPTwo.transform.position;
         camera1.active = standardCamera;
-        
+        ChangeCamera();
+        topdown = false;
     }
     public void TP3()
     {
@@ -88,6 +95,8 @@ public class TowerControllerScript : MonoBehaviour
         TP_UI.SetActive(false);
         Player.GetComponent<playerMovement>().enabled = true;
         camera1.active = standardCamera;
+        ChangeCamera();
+        topdown = false;
     }
     public void TP4()
     {
@@ -95,6 +104,8 @@ public class TowerControllerScript : MonoBehaviour
         TP_UI.SetActive(false);
         Player.GetComponent<playerMovement>().enabled = true;
         camera1.active = standardCamera;
+        ChangeCamera();
+        topdown = false;
     }
     public void TP5()
     {
@@ -102,5 +113,7 @@ public class TowerControllerScript : MonoBehaviour
         TP_UI.SetActive(false);
         Player.GetComponent<playerMovement>().enabled = true;
         camera1.active = standardCamera;
+        ChangeCamera();
+        topdown = false;
     }
 }
