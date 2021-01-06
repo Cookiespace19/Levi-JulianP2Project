@@ -1,37 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-	public float speed;
-	private Waypoints Wpoints;
+	[SerializeField] int waypointIndex = 0;
+	[SerializeField] int lastCheckpoint;
 
-	private int waypointIndex;
+	public NavMeshAgent agent;
+	public GameObject enemy;
+
+	private void Awake()
+	{
+		agent = enemy.GetComponent<NavMeshAgent>();
+	}
 
 	private void Start()
 	{
-		Wpoints = GameObject.FindGameObjectWithTag("Waypoints").GetComponent<Waypoints>();
+		NextPoint();
+		lastCheckpoint = Waypoints.Instance.waypoints.Length;
 	}
 
-	private void Update()
+	private void OnTriggerEnter(Collider other)
 	{
-		transform.position = Vector3.MoveTowards(transform.position, Wpoints.waypoints[waypointIndex].position, speed * Time.deltaTime);
-
-		Vector3 dir = Wpoints.waypoints[waypointIndex].position - transform.position;
-		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-		if (Vector3.Distance(transform.position, Wpoints.waypoints[waypointIndex].position) < 0.1f)
+		if(other.gameObject.tag == "Waypoints")
 		{
-			if(waypointIndex < Wpoints.waypoints.Length - 1)
+			if (waypointIndex < lastCheckpoint - 1)
 			{
 				waypointIndex++;
+				NextPoint();
 			}
 			else
 			{
 				Destroy(gameObject);
 			}
 		}
+	}
+
+	private void NextPoint()
+	{
+		agent.SetDestination(Waypoints.Instance.waypoints[waypointIndex].transform.position);
 	}
 }
