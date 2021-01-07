@@ -41,4 +41,9 @@ public class MainMenu : MonoBehaviour
         MainMenuCamera.active = false;
         camera1.active = true;
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

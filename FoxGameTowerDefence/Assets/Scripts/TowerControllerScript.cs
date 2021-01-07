@@ -20,6 +20,7 @@ public class TowerControllerScript : MonoBehaviour
 
     bool topdown;
  
+    bool triggerStay = false;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -35,7 +36,6 @@ public class TowerControllerScript : MonoBehaviour
         triggerStay = false;
     }
 
-    bool triggerStay = false;
 
     public void Update()
     {
@@ -45,10 +45,9 @@ public class TowerControllerScript : MonoBehaviour
             camera1.active = !camera1.active;
             camera2.active = !camera2.active;
             topdown = true;
-
             TP_UI.SetActive(true);
             Player.GetComponent<playerMovement>().enabled = false;
-
+           
         }
 
     }
@@ -77,7 +76,8 @@ public class TowerControllerScript : MonoBehaviour
         camera1.active = standardCamera;
         ChangeCamera();
         topdown = false;
-        
+       
+
     }
     public void TP2()
     {
@@ -88,6 +88,7 @@ public class TowerControllerScript : MonoBehaviour
         camera1.active = standardCamera;
         ChangeCamera();
         topdown = false;
+        
     }
     public void TP3()
     {
@@ -97,6 +98,7 @@ public class TowerControllerScript : MonoBehaviour
         camera1.active = standardCamera;
         ChangeCamera();
         topdown = false;
+        
     }
     public void TP4()
     {
@@ -106,6 +108,7 @@ public class TowerControllerScript : MonoBehaviour
         camera1.active = standardCamera;
         ChangeCamera();
         topdown = false;
+        
     }
     public void TP5()
     {
@@ -115,5 +118,6 @@ public class TowerControllerScript : MonoBehaviour
         camera1.active = standardCamera;
         ChangeCamera();
         topdown = false;
+        
     }
 }
