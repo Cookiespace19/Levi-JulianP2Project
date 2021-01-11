@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -15,9 +17,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject SensitivitySliderUI;
     public GameObject AudioSliderUI;
     public GameObject BackButton;
-    
-    
-  
 
     void Update()
     {
@@ -56,6 +55,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Back()
     {
+
         SensitivitySliderUI.SetActive(false);
         AudioSliderUI.SetActive(false);
         BackButton.SetActive(false);
