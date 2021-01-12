@@ -503,8 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e04b735a37cb1a489ba7e89976add4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuActive: {fileID: 1491190465}
-  MenuInActive: {fileID: 1729960003}
+  TotemMenuUI: {fileID: 0}
   MenuIsActive: 0
   Beer: {fileID: 1346420484173307681, guid: 66eb9ded4fafeed4a99321acfc286830, type: 3}
   Hert: {fileID: 6452528094954306103, guid: a8a70fa0e6e7b3d48aeb5b892c9089b6, type: 3}
@@ -774,7 +773,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349286325}
-  m_LocalRotation: {x: 0.16018224, y: -0.000000004252742, z: 6.9012535e-10, w: 0.9870875}
+  m_LocalRotation: {x: 0.16018224, y: 0.000000004252742, z: -6.9012535e-10, w: 0.9870875}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1625,8 +1624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e04b735a37cb1a489ba7e89976add4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuActive: {fileID: 1491190465}
-  MenuInActive: {fileID: 1729960003}
+  TotemMenuUI: {fileID: 0}
   MenuIsActive: 0
   Beer: {fileID: 1346420484173307681, guid: 66eb9ded4fafeed4a99321acfc286830, type: 3}
   Hert: {fileID: 6452528094954306103, guid: a8a70fa0e6e7b3d48aeb5b892c9089b6, type: 3}
@@ -1736,7 +1734,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.14220117, y: 0.000000034063053, z: -0.0000000048935354, w: 0.98983777}
+  m_LocalRotation: {x: 0.14220117, y: -0.000000034063053, z: 0.0000000048935354, w: 0.98983777}
   m_LocalPosition: {x: 0.08, y: 5.3, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2371,8 +2369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e04b735a37cb1a489ba7e89976add4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuActive: {fileID: 1491190465}
-  MenuInActive: {fileID: 1729960003}
+  TotemMenuUI: {fileID: 0}
   MenuIsActive: 0
   Beer: {fileID: 1346420484173307681, guid: 66eb9ded4fafeed4a99321acfc286830, type: 3}
   Hert: {fileID: 6452528094954306103, guid: a8a70fa0e6e7b3d48aeb5b892c9089b6, type: 3}
@@ -3026,7 +3023,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408559624}
-  m_LocalRotation: {x: 0.14220114, y: 0.000000017031526, z: -0.0000000024467672, w: 0.9898378}
+  m_LocalRotation: {x: 0.14220114, y: -0.000000017031528, z: 0.0000000024467675, w: 0.9898378}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3459,8 +3456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e04b735a37cb1a489ba7e89976add4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuActive: {fileID: 1491190465}
-  MenuInActive: {fileID: 1729960003}
+  TotemMenuUI: {fileID: 0}
   MenuIsActive: 0
   Beer: {fileID: 1346420484173307681, guid: 66eb9ded4fafeed4a99321acfc286830, type: 3}
   Hert: {fileID: 6452528094954306103, guid: a8a70fa0e6e7b3d48aeb5b892c9089b6, type: 3}
@@ -4109,7 +4105,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934091542}
-  m_LocalRotation: {x: 0.124220625, y: 0.000000017598554, z: -0.0000000022031676, w: 0.9922547}
+  m_LocalRotation: {x: 0.124220625, y: -0.000000017598564, z: 0.0000000022031688, w: 0.9922547}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

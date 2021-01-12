@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class TowerPlacing : MonoBehaviour
 {
-	public GameObject MenuActive;
-	public GameObject MenuInActive;
+    public GameObject TotemMenuUI;
+	//public GameObject MenuActive;
+	//public GameObject MenuInActive;
 	[SerializeField] bool MenuIsActive = false;
 
     public GameObject Beer;
@@ -17,8 +18,9 @@ public class TowerPlacing : MonoBehaviour
 
     private void Start()
 	{
-		MenuActive.active = MenuIsActive;
-		MenuInActive.active = !MenuIsActive;
+        TotemMenuUI.SetActive(false);
+		//MenuActive.active = MenuIsActive;
+		//MenuInActive.active = !MenuIsActive;
 	}
 
     private void Update()
@@ -26,40 +28,45 @@ public class TowerPlacing : MonoBehaviour
         if (Input.GetButtonDown("TabMenu") && PlayerInTrigger == true)
         {
             print("MenuActive");
+            TotemMenuUI.SetActive(true);
             MenuIsActive = !MenuIsActive;
-            MenuActive.active = MenuIsActive;
-            MenuInActive.active = !MenuIsActive;
+           // MenuActive.active = MenuIsActive;
+           // MenuInActive.active = !MenuIsActive;
         }
 
 		if (Input.GetKeyDown(KeyCode.Z) && MenuIsActive == true)
 		{
             Instantiate(Beer, transform.position, Quaternion.identity);
-            MenuActive.active = !MenuIsActive;
-            MenuInActive.active = MenuIsActive;
+            // MenuActive.active = !MenuIsActive;
+            // MenuInActive.active = MenuIsActive;
+            TotemMenuUI.SetActive(false);
             MenuIsActive = !MenuIsActive;
             Destroy(gameObject);
 		}
         if (Input.GetKeyDown(KeyCode.X) && MenuIsActive == true)
         {
             Instantiate(Hert, transform.position, Quaternion.identity);
-            MenuActive.active = !MenuIsActive;
-            MenuInActive.active = MenuIsActive;
+            // MenuActive.active = !MenuIsActive;
+            // MenuInActive.active = MenuIsActive;
+            TotemMenuUI.SetActive(false);
             MenuIsActive = !MenuIsActive;
             Destroy(gameObject);
         }
         if (Input.GetKeyDown(KeyCode.C) && MenuIsActive == true)
         {
             Instantiate(Stekelvarken, transform.position, Quaternion.identity);
-            MenuActive.active = !MenuIsActive;
-            MenuInActive.active = MenuIsActive;
+            // MenuActive.active = !MenuIsActive;
+            // MenuInActive.active = MenuIsActive;
+            TotemMenuUI.SetActive(false);
             MenuIsActive = !MenuIsActive;
             Destroy(gameObject);
         }
         if (Input.GetKeyDown(KeyCode.V) && MenuIsActive == true)
         {
             Instantiate(Wolf, transform.position, Quaternion.identity);
-            MenuActive.active = !MenuIsActive;
-            MenuInActive.active = MenuIsActive;
+            // MenuActive.active = !MenuIsActive;
+            // MenuInActive.active = MenuIsActive;
+            TotemMenuUI.SetActive(false);
             MenuIsActive = !MenuIsActive;
             Destroy(gameObject);
         }
@@ -82,8 +89,9 @@ public class TowerPlacing : MonoBehaviour
             PlayerInTrigger = false;
             if(MenuIsActive == true)
 			{
-                MenuActive.active = false;
-                MenuInActive.active = true;
+                TotemMenuUI.SetActive(false);
+                // MenuActive.active = false;
+                // MenuInActive.active = true;
                 MenuIsActive = false;
 			}
         }
