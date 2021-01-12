@@ -9,16 +9,19 @@ public class EnemyAI : MonoBehaviour
 	public NavMeshAgent agent;
 	public GameObject enemy;
 
+
 	private void Awake()
 	{
 		agent = enemy.GetComponent<NavMeshAgent>();
 	}
+
 
 	private void Start()
 	{
 		NextPoint();
 		lastCheckpoint = Waypoints.Instance.waypoints.Length;
 	}
+
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -35,6 +38,7 @@ public class EnemyAI : MonoBehaviour
 			}
 		}
 	}
+
 
 	private void NextPoint()
 	{

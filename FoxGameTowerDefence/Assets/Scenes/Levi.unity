@@ -535,6 +535,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196549090}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
+=======
+--- !u!1 &234311226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 234311229}
+  - component: {fileID: 234311228}
+  - component: {fileID: 234311227}
+  m_Layer: 0
+  m_Name: TowerPlacement (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &234311227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234311226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e04b735a37cb1a489ba7e89976add4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotemMenuUI: {fileID: 0}
+  MenuIsActive: 0
+  Beer: {fileID: 919132149155446097, guid: 5186e1ad5841ad4418069d54c632961c, type: 3}
+  Hert: {fileID: 919132149155446097, guid: 5e088505da1f09e449a7e7be3d9bec37, type: 3}
+  Stekelvarken: {fileID: 919132149155446097, guid: 43dab5d7086a9844ba16865df92f6b99, type: 3}
+  Wolf: {fileID: 919132149155446097, guid: f068bb3f7e1e4d84a985e1ef19ea33c9, type: 3}
+--- !u!65 &234311228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234311226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0775394, y: 6.3681026, z: 4.0659094}
+  m_Center: {x: -0.12914562, y: 2.5062478, z: 0.1173377}
+--- !u!4 &234311229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234311226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.84, y: 0, z: 11.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> 8b4e16c4fabd5e0245a06f89105a869cabd2166c
 --- !u!1 &275355065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,6 +1910,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+<<<<<<< HEAD
 --- !u!224 &895094488
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1864,6 +1931,9 @@ RectTransform:
   m_SizeDelta: {x: 448.76984, y: 105.15582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &895094489
+=======
+--- !u!114 &881068435
+>>>>>>> 8b4e16c4fabd5e0245a06f89105a869cabd2166c
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1875,6 +1945,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  TotemMenuUI: {fileID: 0}
+  MenuIsActive: 0
+  Beer: {fileID: 919132149155446097, guid: 5186e1ad5841ad4418069d54c632961c, type: 3}
+  Hert: {fileID: 919132149155446097, guid: 5e088505da1f09e449a7e7be3d9bec37, type: 3}
+  Stekelvarken: {fileID: 919132149155446097, guid: 43dab5d7086a9844ba16865df92f6b99, type: 3}
+  Wolf: {fileID: 919132149155446097, guid: f068bb3f7e1e4d84a985e1ef19ea33c9, type: 3}
+--- !u!65 &881068436
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881068434}
+>>>>>>> 8b4e16c4fabd5e0245a06f89105a869cabd2166c
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -3348,6 +3434,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+--- !u!1 &1100609588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1100609591}
+  - component: {fileID: 1100609590}
+  - component: {fileID: 1100609589}
+  m_Layer: 0
+  m_Name: TowerPlacement (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1100609589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100609588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e04b735a37cb1a489ba7e89976add4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotemMenuUI: {fileID: 0}
+  MenuIsActive: 0
+  Beer: {fileID: 919132149155446097, guid: 5186e1ad5841ad4418069d54c632961c, type: 3}
+  Hert: {fileID: 919132149155446097, guid: 5e088505da1f09e449a7e7be3d9bec37, type: 3}
+  Stekelvarken: {fileID: 919132149155446097, guid: 43dab5d7086a9844ba16865df92f6b99, type: 3}
+  Wolf: {fileID: 919132149155446097, guid: f068bb3f7e1e4d84a985e1ef19ea33c9, type: 3}
+--- !u!65 &1100609590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100609588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0775394, y: 6.3681026, z: 4.0659094}
+  m_Center: {x: -0.12914562, y: 2.5062478, z: 0.1173377}
+--- !u!4 &1100609591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100609588}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.05, y: 0, z: 12.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> 8b4e16c4fabd5e0245a06f89105a869cabd2166c
 --- !u!1 &1125298695
 GameObject:
   m_ObjectHideFlags: 0
@@ -4749,6 +4901,72 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -258}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+=======
+--- !u!1 &1635120277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635120280}
+  - component: {fileID: 1635120279}
+  - component: {fileID: 1635120278}
+  m_Layer: 0
+  m_Name: TowerPlacement
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1635120278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635120277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e04b735a37cb1a489ba7e89976add4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotemMenuUI: {fileID: 0}
+  MenuIsActive: 0
+  Beer: {fileID: 919132149155446097, guid: 5186e1ad5841ad4418069d54c632961c, type: 3}
+  Hert: {fileID: 919132149155446097, guid: 5e088505da1f09e449a7e7be3d9bec37, type: 3}
+  Stekelvarken: {fileID: 919132149155446097, guid: 43dab5d7086a9844ba16865df92f6b99, type: 3}
+  Wolf: {fileID: 919132149155446097, guid: f068bb3f7e1e4d84a985e1ef19ea33c9, type: 3}
+--- !u!65 &1635120279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635120277}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0775394, y: 6.3681026, z: 4.0659094}
+  m_Center: {x: -0.12914562, y: 2.5062478, z: 0.1173377}
+--- !u!4 &1635120280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635120277}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.84, y: 0, z: 19.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> 8b4e16c4fabd5e0245a06f89105a869cabd2166c
 --- !u!1 &1640188730
 GameObject:
   m_ObjectHideFlags: 3
