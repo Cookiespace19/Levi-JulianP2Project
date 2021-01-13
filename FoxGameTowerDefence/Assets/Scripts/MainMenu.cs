@@ -11,9 +11,12 @@ public class MainMenu : MonoBehaviour
 
     public GameObject MMUI;
 
+    public GameObject TreeLifeUI;
+
 
     void Start()
     {
+        TreeLifeUI.SetActive(false);
         camera1.active = false;
         MainMenuCamera.active = true;
     }
@@ -40,6 +43,7 @@ public class MainMenu : MonoBehaviour
     {
         MainMenuCamera.active = false;
         camera1.active = true;
+        TreeLifeUI.SetActive(true);
     }
 
     public void QuitGame()

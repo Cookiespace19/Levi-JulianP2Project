@@ -36,7 +36,7 @@ public class WaveSystem : MonoBehaviour
 		yield return new WaitForSeconds(6f);
 		for (int i = 0; i < enemySpawnRateWave1; i++)
 		{
-			Instantiate(prefabEnemy);
+			Instantiate(prefabEnemy, new Vector3(305, 32, 778), Quaternion.identity);
 		}
 		yield return new WaitForSeconds(1f);
 		StartCoroutine("Wave2");
@@ -51,6 +51,8 @@ public class WaveSystem : MonoBehaviour
 		for (int i = 0; i < enemySpawnRateWave2; i++)
 		{
 			Instantiate(prefabEnemy);
+			
+			
 		}
 		yield return new WaitForSeconds(1f);
 		StartCoroutine("Wave3");
