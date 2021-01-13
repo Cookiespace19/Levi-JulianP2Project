@@ -34,7 +34,7 @@ public class TowerPlacing : MonoBehaviour
            // MenuInActive.active = !MenuIsActive;
         }
 
-		if (Input.GetKeyDown(KeyCode.Z) && MenuIsActive == true)
+		if (Input.GetKeyDown(KeyCode.LeftArrow) && MenuIsActive == true)
 		{
             Instantiate(Beer, transform.position, Quaternion.identity);
             // MenuActive.active = !MenuIsActive;
@@ -43,7 +43,7 @@ public class TowerPlacing : MonoBehaviour
             MenuIsActive = !MenuIsActive;
             Destroy(gameObject);
 		}
-        if (Input.GetKeyDown(KeyCode.X) && MenuIsActive == true)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && MenuIsActive == true)
         {
             Instantiate(Hert, transform.position, Quaternion.identity);
             // MenuActive.active = !MenuIsActive;
@@ -52,7 +52,7 @@ public class TowerPlacing : MonoBehaviour
             MenuIsActive = !MenuIsActive;
             Destroy(gameObject);
         }
-        if (Input.GetKeyDown(KeyCode.C) && MenuIsActive == true)
+        if (Input.GetKeyDown(KeyCode.RightArrow) && MenuIsActive == true)
         {
             Instantiate(Stekelvarken, transform.position, Quaternion.identity);
             // MenuActive.active = !MenuIsActive;
@@ -61,7 +61,7 @@ public class TowerPlacing : MonoBehaviour
             MenuIsActive = !MenuIsActive;
             Destroy(gameObject);
         }
-        if (Input.GetKeyDown(KeyCode.V) && MenuIsActive == true)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && MenuIsActive == true)
         {
             Instantiate(Wolf, transform.position, Quaternion.identity);
             // MenuActive.active = !MenuIsActive;

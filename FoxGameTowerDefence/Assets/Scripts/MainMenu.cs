@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject TreeLifeUI;
 
+    public bool mainmenuActive;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class MainMenu : MonoBehaviour
     {
         if (MainMenuCamera.active)
         {
+            mainmenuActive = true;
             MMUI.SetActive(true);
             player.GetComponent<playerMovement>().enabled = false;
 
@@ -33,6 +35,7 @@ public class MainMenu : MonoBehaviour
 
         if (camera1.active)
         {
+            mainmenuActive = false;
             MMUI.SetActive(false);
             player.GetComponent<playerMovement>().enabled = true;
         }

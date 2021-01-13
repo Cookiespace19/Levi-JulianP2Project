@@ -8,6 +8,7 @@ TagManager:
   - EndTree
   - Waypoints
   - WaypointsParent
+  - MainMenuIsActive
   layers:
   - Default
   - TransparentFX
