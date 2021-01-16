@@ -39,7 +39,7 @@ public class TowerControllerScript : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && triggerStay == true && topdown == false)
+        if (Input.GetButtonDown("CamChange") && triggerStay == true && topdown == false)
         {
            
             camera1.active = !camera1.active;
