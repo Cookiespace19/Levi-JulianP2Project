@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
 
 	public float speed;
 
+	public float hitDamage = 20f;
+
 	public void Seek(Transform _target)
 	{
 		target = _target;
@@ -34,6 +36,7 @@ public class Bullet : MonoBehaviour
 
 	void HitTarget()
 	{
+		EnemyHealth.Instance.enemyHealth = EnemyHealth.Instance.enemyHealth - hitDamage;
 		Destroy(gameObject);
 	}
 }

@@ -1,63 +1,69 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class waveSpawner : MonoBehaviour
 {
+    [Header("References")]
     public GameObject MMUI;
     public GameObject WaveCountDownTimer;
+    public GameObject prefabEnemy;
+    public Transform enemySpawner;
 
-    public Transform enemyPrefab;
+    [Header("Text")]
+    public Text waveCountDownText;
+    public TextMeshProUGUI maxWaves;
+    public string maxWavesNumber;
+    public TextMeshProUGUI wave;
 
-    public Transform SpawnPoint;
-
-    public float timeBetweenWaves = 5f;
+    private float timeBetweenWaves = 5f;
     private float countdown = 10f;
 
-    public Text wavecountdownText;
+    private int spawnRate;
 
+	private void Start()
+	{
+        maxWaves.text = maxWavesNumber;
+    }
 
-    private int waveIndex = 0;
-
-   
-    
-    void Update()
+	void Update()
     {
         if (MMUI.active == false)
         {
-            WaveCountDownTimer.SetActive(true);
-
-            if (countdown <= 0f)
-            {
-                StartCoroutine(SpawnWave());
-                countdown = timeBetweenWaves;
-
-
-            }
-
-
-            countdown -= Time.deltaTime;
-
-            wavecountdownText.text = Mathf.Round(countdown).ToString();
+            StartWave();
         }
-        else return;
+
+        if(spawnRate == 5)
+		{
+            StopCoroutine(SpawnWave());
+            //load win screen
+		}
     }
+
+    private void StartWave()
+	{
+        WaveCountDownTimer.SetActive(true);
+
+        countdown -= Time.deltaTime;
+
+        if (countdown <= 0f)
+        {
+            StartCoroutine(SpawnWave());
+            countdown = timeBetweenWaves;
+        }
+
+        waveCountDownText.text = Mathf.Round(countdown).ToString();
+    }
+
     IEnumerator SpawnWave()
     {
-        waveIndex++;
-        for (int i = 0; i < waveIndex; i++)
+        spawnRate++;
+        for (int i = 0; i < spawnRate; i++)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(3f);
+            Instantiate(prefabEnemy, enemySpawner.position, enemySpawner.rotation);
+            wave.text = spawnRate.ToString();
+            yield return new WaitForSeconds(0f);
         }
-
     }
-
-    void SpawnEnemy()
-    {
-        Instantiate(enemyPrefab, SpawnPoint.position, SpawnPoint.rotation);
-    }
-
 }

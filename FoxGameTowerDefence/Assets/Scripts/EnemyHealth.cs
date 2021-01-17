@@ -10,6 +10,19 @@ public class EnemyHealth : MonoBehaviour
 
     public Slider slider;
 
+    public static EnemyHealth Instance { get; private set; }
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         enemyHealth = enemyMaxHealth;

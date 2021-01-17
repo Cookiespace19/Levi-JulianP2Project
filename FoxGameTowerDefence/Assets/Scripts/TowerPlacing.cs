@@ -18,19 +18,11 @@ public class TowerPlacing : MonoBehaviour
 
     bool PlayerInTrigger = false;
 
-    public GameObject placement1;
-    public GameObject placement2; 
-    public GameObject placement3;
-    public GameObject placement4;
-    public GameObject placement5;
-    public GameObject placement6;
-    public GameObject placement7;
+    public GameObject[] Towerplacements;
 
     private void Start()
 	{
-        
         TotemMenuUI.SetActive(false);
-		
 	}
 
     private void Update()
@@ -55,58 +47,39 @@ public class TowerPlacing : MonoBehaviour
             // zoek een manier zodat het script begrijpt welke van de 7 placements hij de totems moet plaatsen
         }
     }
-       
 
-		  public void BearTotem()
+    public void BearTotem()
     {
-            
-            Instantiate(Beer, transform.position, Quaternion.identity);
-            TotemMenuUI.SetActive(false);
-            MenuIsActive = !MenuIsActive;
-            Destroy(gameObject);
+        Instantiate(Beer, transform.position, Quaternion.identity);
+        TotemMenuUI.SetActive(false);
+        MenuIsActive = !MenuIsActive;
+        Destroy(gameObject);
     }
-		
 
-       
+    public void StagTotem()
+    { 
+        Instantiate(Hert, transform.position, Quaternion.identity);
+        TotemMenuUI.SetActive(false);
+        MenuIsActive = !MenuIsActive;
+        Destroy(gameObject);
+    }
 
-        public void StagTotem()
-        {
-            
-            Instantiate(Hert, transform.position, Quaternion.identity);
-            TotemMenuUI.SetActive(false);
-            MenuIsActive = !MenuIsActive;
-            Destroy(gameObject);
-            
+    public void PorcupineTotem()
+    {
+        Instantiate(Stekelvarken, transform.position, Quaternion.identity);
+        TotemMenuUI.SetActive(false);
+        MenuIsActive = !MenuIsActive;
+        Destroy(gameObject);
+    }
 
-            
-        }
-
-       public void PorcupineTotem()
-        {
-          
-            
-            Instantiate(Stekelvarken, transform.position, Quaternion.identity);
-            TotemMenuUI.SetActive(false);
-            MenuIsActive = !MenuIsActive;
-            Destroy(gameObject);
-            
-
-           
-        }
-
-       public void WolfTotem()
-        {
-
-           
-            Instantiate(Wolf, transform.position, Quaternion.identity);
-            TotemMenuUI.SetActive(false);
-            MenuIsActive = !MenuIsActive;
-            Destroy(gameObject);
- 
-        }
+    public void WolfTotem()
+    {
+        Instantiate(Wolf, transform.position, Quaternion.identity);
+        TotemMenuUI.SetActive(false);
+        MenuIsActive = !MenuIsActive;
+        Destroy(gameObject); 
+    }
       
-    
-
     void OnTriggerEnter(Collider other)
     {
         
@@ -129,6 +102,4 @@ public class TowerPlacing : MonoBehaviour
 			}
         }
     }
-
-    
 }

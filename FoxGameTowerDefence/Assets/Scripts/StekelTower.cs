@@ -62,8 +62,9 @@ public class StekelTower : MonoBehaviour
 	{
 		GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 		Bullet bullet = bulletGO.GetComponent<Bullet>();
+		bulletGO.transform.LookAt(target);
 
-		if(bullet != null)
+		if (bullet != null)
 		{
 			bullet.Seek(target);
 		}
