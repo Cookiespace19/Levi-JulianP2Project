@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TowerPlacing : MonoBehaviour
 {
@@ -13,9 +14,18 @@ public class TowerPlacing : MonoBehaviour
     public GameObject Stekelvarken;
     public GameObject Wolf;
 
+    public GameObject TotemFirstButton;
+
     bool PlayerInTrigger = false;
 
-   
+    public GameObject placement1;
+    public GameObject placement2; 
+    public GameObject placement3;
+    public GameObject placement4;
+    public GameObject placement5;
+    public GameObject placement6;
+    public GameObject placement7;
+
     private void Start()
 	{
         
@@ -25,33 +35,43 @@ public class TowerPlacing : MonoBehaviour
 
     private void Update()
     {
-        
 
         if (Input.GetButtonDown("TabMenu") && PlayerInTrigger == true)
         {
-            print("MenuActive");
             TotemMenuUI.SetActive(true);
             MenuIsActive = !MenuIsActive;
-         
+
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(TotemFirstButton);
+
+            currentTotemSpot();
         }
+    }
 
-        float LeftTrigger = Input.GetAxis("Left Trigger");
+    public void currentTotemSpot()
+    {
+        if(PlayerInTrigger == true )
+        {
+            // zoek een manier zodat het script begrijpt welke van de 7 placements hij de totems moet plaatsen
+        }
+    }
+       
 
-		if (LeftTrigger > 0 && MenuIsActive == true)
-		{    
-            print("dpad Left clicked");
+		  public void BearTotem()
+    {
+            
             Instantiate(Beer, transform.position, Quaternion.identity);
             TotemMenuUI.SetActive(false);
             MenuIsActive = !MenuIsActive;
             Destroy(gameObject);
-		}
+    }
+		
 
-        float RightTrigger = Input.GetAxis("Right Trigger");
+       
 
-        if (RightTrigger > 0 && MenuIsActive == true)
+        public void StagTotem()
         {
             
-            print("dpad Up clicked");
             Instantiate(Hert, transform.position, Quaternion.identity);
             TotemMenuUI.SetActive(false);
             MenuIsActive = !MenuIsActive;
@@ -61,10 +81,10 @@ public class TowerPlacing : MonoBehaviour
             
         }
 
-        if (Input.GetButtonDown("Right Button") && MenuIsActive == true)
+       public void PorcupineTotem()
         {
           
-            print("dpad Right clicked");
+            
             Instantiate(Stekelvarken, transform.position, Quaternion.identity);
             TotemMenuUI.SetActive(false);
             MenuIsActive = !MenuIsActive;
@@ -74,10 +94,10 @@ public class TowerPlacing : MonoBehaviour
            
         }
 
-        if (Input.GetButtonDown("Left Button") && MenuIsActive == true)
+       public void WolfTotem()
         {
 
-            print("dpad Down clicked");
+           
             Instantiate(Wolf, transform.position, Quaternion.identity);
             TotemMenuUI.SetActive(false);
             MenuIsActive = !MenuIsActive;
@@ -85,11 +105,11 @@ public class TowerPlacing : MonoBehaviour
  
         }
       
-    }
+    
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entered");
+        
         if (other.tag == ("Player"))
         {
             PlayerInTrigger = true;
@@ -98,7 +118,7 @@ public class TowerPlacing : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("Exited");
+        
         if (other.tag == ("Player"))
         {
             PlayerInTrigger = false;
@@ -110,5 +130,5 @@ public class TowerPlacing : MonoBehaviour
         }
     }
 
-    //Plaatsen van n totem, destroyed de empty en zet het menu false.
+    
 }

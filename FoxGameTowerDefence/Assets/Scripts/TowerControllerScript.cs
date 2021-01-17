@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TowerControllerScript : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class TowerControllerScript : MonoBehaviour
     public Transform TPFive;
 
     public GameObject TP_UI;
+
+    public GameObject TPfirstbutton;
+
+   
 
     bool topdown;
  
@@ -47,6 +52,9 @@ public class TowerControllerScript : MonoBehaviour
             topdown = true;
             TP_UI.SetActive(true);
             Player.GetComponent<playerMovement>().enabled = false;
+
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(TPfirstbutton);
            
         }
 

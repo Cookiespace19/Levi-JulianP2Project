@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -18,11 +19,16 @@ public class PauseMenu : MonoBehaviour
     public GameObject AudioSliderUI;
     public GameObject BackButton;
 
+    public GameObject pauseFirstButton, SettingsFirstButton;
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("pauseMenu"))
         {    //stop everything. were paused
             Pause();
+
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         }
     }
 
@@ -51,6 +57,8 @@ public class PauseMenu : MonoBehaviour
         AudioSliderUI.SetActive(true);
         BackButton.SetActive(true);
 
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(SettingsFirstButton);
     }
 
     public void Back()

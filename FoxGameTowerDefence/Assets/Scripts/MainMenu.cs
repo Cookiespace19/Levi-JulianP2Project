@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MainMenu : MonoBehaviour
 {
     public GameObject player;
+
+    public GameObject howtoplay;
 
     public GameObject MainMenuCamera;
     public GameObject camera1;
@@ -14,6 +17,8 @@ public class MainMenu : MonoBehaviour
     public GameObject TreeLifeUI;
 
     public bool mainmenuActive;
+
+   
 
     void Start()
     {
@@ -39,6 +44,11 @@ public class MainMenu : MonoBehaviour
             MMUI.SetActive(false);
             player.GetComponent<playerMovement>().enabled = true;
         }
+
+        if(howtoplay.active == true && Input.GetButtonDown("Cancel"))
+        {
+            howtoplay.active = false;
+        }
        
     }
 
@@ -47,6 +57,12 @@ public class MainMenu : MonoBehaviour
         MainMenuCamera.active = false;
         camera1.active = true;
         TreeLifeUI.SetActive(true);
+    }
+
+    public void HowToPlay()
+    {
+        howtoplay.active = true;
+       
     }
 
     public void QuitGame()
