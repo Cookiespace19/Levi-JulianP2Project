@@ -36,7 +36,7 @@ public class Klauw : MonoBehaviour
 
 	void HitTarget()
 	{
-		EnemyHealth.Instance.enemyHealth = EnemyHealth.Instance.enemyHealth - hitDamage;
+		//EnemyHealth.Instance.enemyHealth = EnemyHealth.Instance.enemyHealth - hitDamage;
 		Destroy(gameObject);
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public static EnemyHealth Instance { get; private set; }
+   /* public static EnemyHealth Instance { get; private set; }
     void Awake()
     {
         if (Instance == null)
@@ -16,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 
     public float enemyHealth;
     public float enemyMaxHealth;
