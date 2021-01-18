@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class TreeHealth : MonoBehaviour
 {
+    public GameObject GameOverUI;
+    public GameObject QuitfirstButton;
     public static TreeHealth Instance { get; private set; }
     void Awake()
     {
@@ -36,6 +39,13 @@ public class TreeHealth : MonoBehaviour
         if (treeHealth <= 0)
         {
             Destroy(gameObject);
+            GameOverUI.active = true;
+
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(QuitfirstButton);
+
+            Time.timeScale = 0f;
+
         }
 
         if (treeHealth > treeMaxHealth)
