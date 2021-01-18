@@ -71,6 +71,9 @@ public class PauseMenu : MonoBehaviour
         SettingsButton.SetActive(true);
         ResumeButton.SetActive(true);
         QuitButton.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
     }
 
     public void QuitGame()

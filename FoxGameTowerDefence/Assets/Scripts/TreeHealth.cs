@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class TreeHealth : MonoBehaviour
 {
     public GameObject GameOverUI;
-    public GameObject QuitfirstButton;
+    public GameObject mainMenufirstButton;
     public static TreeHealth Instance { get; private set; }
     void Awake()
     {
@@ -42,7 +42,7 @@ public class TreeHealth : MonoBehaviour
             GameOverUI.active = true;
 
             EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(QuitfirstButton);
+            EventSystem.current.SetSelectedGameObject(mainMenufirstButton);
 
             Time.timeScale = 0f;
 

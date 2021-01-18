@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 
 public class MainMenu : MonoBehaviour
@@ -19,20 +20,25 @@ public class MainMenu : MonoBehaviour
 
     public bool mainmenuActive;
 
+    public GameObject startButtonfirst;
    
 
     void Start()
     {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(startButtonfirst);
+
         TreeLifeUI.SetActive(false);
         camera1.active = false;
         MainMenuCamera.active = true;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (MainMenuCamera.active)
         {
+            
             mainmenuActive = true;
             player.GetComponent<playerMovement>().enabled = false;
 
