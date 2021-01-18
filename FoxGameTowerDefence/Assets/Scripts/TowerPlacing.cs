@@ -36,17 +36,11 @@ public class TowerPlacing : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(TotemFirstButton);
 
-            currentTotemSpot();
+            
         }
     }
 
-    public void currentTotemSpot()
-    {
-        if(PlayerInTrigger == true )
-        {
-            // zoek een manier zodat het script begrijpt welke van de 7 placements hij de totems moet plaatsen
-        }
-    }
+   
 
     public void BearTotem()
     {
