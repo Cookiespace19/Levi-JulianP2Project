@@ -82,8 +82,8 @@ Material:
     - _ColorRimMin: 0.65
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DirectionVisibility: 0.89
-    - _DistortionFactor: 0.69
+    - _DirectionVisibility: 2
+    - _DistortionFactor: 0.36
     - _DstBlend: 0
     - _Glossiness: 0.5
     - _Metallic: 0
@@ -101,18 +101,18 @@ Material:
     - _RimMax: 0.88
     - _RimMin: -0.16
     - _SrcBlend: 1
-    - _TexturePower: 1
-    - _TextureRimMax: 0.89
-    - _TextureRimMin: -0.3
-    - _TextureScale: 12
-    - _TextureScrollX: 0
+    - _TexturePower: 1.38
+    - _TextureRimMax: 1.17
+    - _TextureRimMin: -0.64
+    - _TextureScale: 11.6
+    - _TextureScrollX: 3.65
     - _TextureScrollY: -3.78
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.52205884, g: 0.29163286, b: 0, a: 0.897}
+    - _Color: {r: 0, g: 0.36693114, b: 0.52156866, a: 0.897}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _PatternColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShieldDirection: {r: 1, g: 0, b: 0, a: 0}
-    - _TextureColor: {r: 0.88235295, g: 0.20761244, b: 0.20761244, a: 0.8980392}
+    - _TextureColor: {r: 0.2028302, g: 0.39162558, b: 0.8113208, a: 0.8980392}
   m_BuildTextureStacks: []

@@ -2,7 +2,6 @@
 
 public class Stekels : MonoBehaviour
 {
-	public EnemyHealth enemyhealth;
 	private Transform target;
 
 	public float speed;
@@ -37,8 +36,7 @@ public class Stekels : MonoBehaviour
 
 	void HitTarget()
 	{
-
-		enemyhealth.enemyHealth = enemyhealth.enemyHealth - hitDamage;
+		//EnemyHealth.Instance.enemyHealth = EnemyHealth.Instance.enemyHealth - hitDamage;
 		Destroy(gameObject);
 	}
 }

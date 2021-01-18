@@ -1,27 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
 public class waveSpawner : MonoBehaviour
 {
+    [Header("References")]
     public GameObject MMUI;
     public GameObject WaveCountDownTimer;
-
-    public Transform enemyPrefab;
-
+    public Text wavecountdownText;
+    public Text waveText;
+    public GameObject enemyPrefab;
     public Transform SpawnPoint;
 
-    public float timeBetweenWaves = 5f;
+    [Header("Input")]
+    public float timeBetweenWaves;
+
     private float countdown = 10f;
-
-    public Text wavecountdownText;
-
-
     private int waveIndex = 0;
 
-
+    [HideInInspector] public List<GameObject> enemies = new List<GameObject>();
 
     void Update()
     {
@@ -30,38 +28,33 @@ public class waveSpawner : MonoBehaviour
         {
             WaveCountDownTimer.SetActive(true);
 
+            countdown -= Time.deltaTime;
             if (countdown <= 0f)
             {
           
                 StartCoroutine(SpawnWave());
                 countdown = timeBetweenWaves;
-
-
             }
-
-
-            countdown -= Time.deltaTime;
-
             wavecountdownText.text = Mathf.Round(countdown).ToString();
         }
         else return;
     }
+
     IEnumerator SpawnWave()
     {
         waveIndex++;
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();
-            yield return new WaitForSeconds(3f);
+            waveText.text = waveIndex.ToString();
+            yield return new WaitForSeconds(0.5f);
         }
-
     }
 
     void SpawnEnemy()
     {
-        print("enemy Spawned");
-        Instantiate(enemyPrefab, SpawnPoint.position, SpawnPoint.rotation);
+        GameObject newGO = (GameObject)Instantiate(enemyPrefab, SpawnPoint.position, SpawnPoint.rotation);
+        enemies.Add(newGO);
     }
-
 }
 
