@@ -33,7 +33,6 @@ public class MainMenu : MonoBehaviour
         if (MainMenuCamera.active)
         {
             mainmenuActive = true;
-            MMUI.SetActive(true);
             player.GetComponent<playerMovement>().enabled = false;
 
         }

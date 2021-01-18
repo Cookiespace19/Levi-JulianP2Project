@@ -5,11 +5,6 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float enemyHealth;
-    public float enemyMaxHealth;
-
-    public Slider slider;
-
     public static EnemyHealth Instance { get; private set; }
     void Awake()
     {
@@ -22,6 +17,11 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public float enemyHealth;
+    public float enemyMaxHealth;
+
+    public Slider slider;
 
     private void Start()
     {

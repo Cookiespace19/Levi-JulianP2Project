@@ -9,6 +9,8 @@ public class EnemyAI : MonoBehaviour
 	public NavMeshAgent agent;
 	public GameObject enemy;
 
+	public float hitDamageOnTree = 100f;
+
 	private void Awake()
 	{
 		agent = enemy.GetComponent<NavMeshAgent>();
@@ -32,6 +34,7 @@ public class EnemyAI : MonoBehaviour
 			else
 			{
 				Destroy(gameObject);
+				TreeHealth.Instance.treeHealth = TreeHealth.Instance.treeHealth - hitDamageOnTree;
 			}
 		}
 	}
