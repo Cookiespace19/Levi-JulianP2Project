@@ -7,6 +7,11 @@ public class EnemyHealth : MonoBehaviour
 {
     public float enemyHealth;
     public float enemyMaxHealth;
+    
+    public int hitDamageBeer = 35;
+    public int hitDamageStekel = 20;
+    public int hitDamageWolf = 5;
+    public int hitDamageHert = 10;
 
     public Slider slider;
 
@@ -34,5 +39,25 @@ public class EnemyHealth : MonoBehaviour
     float CalculateEnemyHealth()
     {
         return enemyHealth / enemyMaxHealth;
+    }
+
+    public void HitTargetBeer()
+	{
+        enemyHealth = enemyHealth - hitDamageBeer;
+    }
+
+    public void HitTargetStekel()
+    {
+        enemyHealth = enemyHealth - hitDamageStekel;
+    }
+
+    public void HitTargetWolf()
+    {
+        enemyHealth = enemyHealth - hitDamageWolf;
+    }
+
+    public void HitTargetHert()
+    {
+        enemyHealth = enemyHealth - hitDamageHert;
     }
 }

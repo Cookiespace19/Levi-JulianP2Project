@@ -63,6 +63,7 @@ public class MainMenu : MonoBehaviour
         MainMenuCamera.active = false;
         camera1.active = true;
         TreeLifeUI.SetActive(true);
+        Time.timeScale = 1f;
     }
 
     public void HowToPlay()

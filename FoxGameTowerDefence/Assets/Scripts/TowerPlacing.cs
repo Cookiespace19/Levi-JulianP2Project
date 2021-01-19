@@ -35,12 +35,8 @@ public class TowerPlacing : MonoBehaviour
 
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(TotemFirstButton);
-
-            
         }
     }
-
-   
 
     public void BearTotem()
     {
@@ -52,10 +48,11 @@ public class TowerPlacing : MonoBehaviour
 
     public void StagTotem()
     { 
-        Instantiate(Hert, transform.position, Quaternion.identity);
+        GameObject newStag = (GameObject)Instantiate(Hert, transform.position, Quaternion.identity);
         TotemMenuUI.SetActive(false);
         MenuIsActive = !MenuIsActive;
         Destroy(gameObject);
+        ForcefieldPlacing.Instance.placeStagTowers.Add(newStag);
     }
 
     public void PorcupineTotem()

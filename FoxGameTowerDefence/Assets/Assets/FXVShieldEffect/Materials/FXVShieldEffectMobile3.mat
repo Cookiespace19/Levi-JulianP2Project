@@ -101,9 +101,9 @@ Material:
     - _RimMax: 0.88
     - _RimMin: -0.16
     - _SrcBlend: 1
-    - _TexturePower: 1.38
-    - _TextureRimMax: 1.17
-    - _TextureRimMin: -0.64
+    - _TexturePower: 4
+    - _TextureRimMax: 1.36
+    - _TextureRimMin: -0.9
     - _TextureScale: 11.6
     - _TextureScrollX: 3.65
     - _TextureScrollY: -3.78

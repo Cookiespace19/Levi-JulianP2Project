@@ -22,6 +22,8 @@ public class playerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    public Animator animator;
+
     private void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -44,7 +46,19 @@ public class playerMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if(direction.magnitude >= 0.1f)
+        bool isWalking = animator.GetBool("isWalking");
+
+        if (!isWalking && direction.magnitude >= 1)
+        {
+            animator.SetBool("isWalking", true);
+		}
+
+        if (isWalking && direction.magnitude == 0)
+        {
+            animator.SetBool("isWalking", false);
+        }
+
+        if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);

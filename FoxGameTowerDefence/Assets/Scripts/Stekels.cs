@@ -6,11 +6,16 @@ public class Stekels : MonoBehaviour
 
 	public float speed;
 
-	public float hitDamage = 20f;
+	EnemyHealth eHealth;
 
 	public void Seek(Transform _target)
 	{
 		target = _target;
+	}
+
+	private void Start()
+	{
+		eHealth = target.GetComponent<EnemyHealth>();
 	}
 
 	private void Update()
@@ -27,16 +32,11 @@ public class Stekels : MonoBehaviour
 
 		if(dir.magnitude <= distanceThisFrame)
 		{
-			HitTarget();
+			eHealth.HitTargetStekel();
+			Destroy(gameObject);
 			return;
 		}
 
 		transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-	}
-
-	void HitTarget()
-	{
-		//EnemyHealth.Instance.enemyHealth = EnemyHealth.Instance.enemyHealth - hitDamage;
-		Destroy(gameObject);
 	}
 }

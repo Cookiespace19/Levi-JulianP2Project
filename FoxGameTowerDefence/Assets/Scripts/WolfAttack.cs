@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Klauw : MonoBehaviour
+public class WolfAttack : MonoBehaviour
 {
 	private Transform target;
 
@@ -32,7 +32,7 @@ public class Klauw : MonoBehaviour
 
 		if(dir.magnitude <= distanceThisFrame)
 		{
-			eHealth.HitTargetBeer();
+			eHealth.HitTargetWolf();
 			Destroy(gameObject);
 			return;
 		}

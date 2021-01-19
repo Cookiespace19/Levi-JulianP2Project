@@ -5,6 +5,15 @@ using UnityEngine.UI;
 
 public class waveSpawner : MonoBehaviour
 {
+    public static waveSpawner Instance { get; private set; }
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
     [Header("References")]
     public GameObject MMUI;
     public GameObject WaveCountDownTimer;
@@ -19,11 +28,12 @@ public class waveSpawner : MonoBehaviour
     private float countdown = 10f;
     private int waveIndex = 0;
 
-    [HideInInspector] public List<GameObject> enemies = new List<GameObject>();
+    public List<GameObject> enemies = new List<GameObject>();
+
+    public GameObject newGO;
 
     void Update()
     {
-        
         if (MMUI.active == false)
         {
             WaveCountDownTimer.SetActive(true);
@@ -31,7 +41,7 @@ public class waveSpawner : MonoBehaviour
             countdown -= Time.deltaTime;
             if (countdown <= 0f)
             {
-          
+
                 StartCoroutine(SpawnWave());
                 countdown = timeBetweenWaves;
             }
@@ -53,7 +63,7 @@ public class waveSpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        GameObject newGO = (GameObject)Instantiate(enemyPrefab, SpawnPoint.position, SpawnPoint.rotation);
+        newGO = (GameObject)Instantiate(enemyPrefab, SpawnPoint.position, SpawnPoint.rotation);
         enemies.Add(newGO);
     }
 }
