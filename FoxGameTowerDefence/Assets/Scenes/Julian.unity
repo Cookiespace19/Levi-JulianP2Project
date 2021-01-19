@@ -16370,7 +16370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1494327373}
   camera: {fileID: 212876266}
-  speed: 10
+  speed: 20
   gravity: -50
   jumpHeight: 3
   groundCheck: {fileID: 454604053}

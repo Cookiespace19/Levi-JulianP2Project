@@ -12,6 +12,9 @@ ModelImporter:
   - first:
       74: 3397547944812852371
     second: Armature|Trot
+  - first:
+      74: -8906060274429245862
+    second: Armature|Trot (1)
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -41,11 +44,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|idle
-      takeName: Armature|idle
+      name: Armature|Trot (1)
+      takeName: Armature|Trot
       internalID: 0
       firstFrame: 0
-      lastFrame: 149
+      lastFrame: 150
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
